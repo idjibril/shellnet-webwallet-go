@@ -17,7 +17,7 @@ var (
 
 const (
 	// Forking config.
-	addressFormat          = "^TRTL([a-zA-Z0-9]{97}|[a-zA-Z0-9]{185})$"
+	addressFormat          = "^WA([a-zA-Z0-9]{97}|[a-zA-Z0-9]{185})$"
 	divisor        float64 = 100 // This is 100 for WATT
 	transactionFee         = 10  // This is 10 for WATT
 )
