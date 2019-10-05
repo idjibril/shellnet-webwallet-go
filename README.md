@@ -32,12 +32,12 @@ Setup user database
 Setup transactions database  
 `~$ cat transaction_db.sql | psql -U <username> -h <host>`
 
-#### Setup Turtlecoin service
+#### Setup WATT service
 Run this once to generate a wallet container.
-`~$ ./turtle-service --container-file <container name> -p <password> -g`  
+`~$ ./watt-service --container-file <container name> -p <password> -g`  
 
-Point turtle-service at an existing daemon like this
-`~$ ./turtle-service --rpc-password <rpc password> --container-file <container name> -p <container password> -d --daemon-address <daemon DNS or IP address> --daemon-port <daemon port>`
+Point watt-service at an existing daemon like this
+`~$ ./watt-service --rpc-password <rpc password> --container-file <container name> -p <container password> -d --daemon-address <daemon DNS or IP address> --daemon-port <daemon port>`
 
 #### Start redis-server
 
@@ -59,8 +59,8 @@ DB_USER=<postgres username> \ # Postgres DB username, NOT system account usernam
 DB_PWD=<postgres password> \ # Postgres DB password, NOT system account password
 HOST_URI='http://localhost' \ # Internal wallet api
 HOST_PORT=':8082' \ # Internal wallet api port
-RPC_PWD=<turtle-service RPC password>  \ # Your turtle-service RPC password
-RPC_PORT=':8070' \ # Your turtle-service RPC port
+RPC_PWD=<watt-service RPC password>  \ # Your watt-service RPC password
+RPC_PORT=':8070' \ # Your watt-service RPC port
 go run wallet.go utils.go
 ```
 * services/user/run.sh  
@@ -91,4 +91,4 @@ go run users.go utils.go
 * Redis
 * Postgresql
 * Go
-* TurtleCoin wallet daemon
+* WATT wallet daemon
